@@ -6,7 +6,17 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
-// Example marker
-const marker = L.marker([1.3521, 103.8198]).addTo(map);
+// Read swing locations from swings.json
+fetch('swings.json')
+    .then(response => response.json())
+    .then(swings => {
 
-marker.bindPopup("<b>First Swing Location</b><br>Singapore").openPopup();
+        swings.forEach(swing => {
+
+            L.marker([swing.lat, swing.lng])
+                .addTo(map)
+                .bindPopup(`<b>${swing.name}</b>`);
+
+        });
+
+    });

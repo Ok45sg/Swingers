@@ -1,0 +1,17 @@
+[
+    {
+        "name": "West Coast Park",
+        "lat": 1.2917,
+        "lng": 103.7647
+    },
+    {
+        "name": "East Coast Park",
+        "lat": 1.3007,
+        "lng": 103.9120
+    },
+    {
+        "name": "Bishan-Ang Mo Kio Park",
+        "lat": 1.3628,
+        "lng": 103.8448
+    }
+]
